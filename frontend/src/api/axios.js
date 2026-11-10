@@ -1,7 +1,8 @@
+
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://ludhiana-express-3zlsuk6os-practice-74ee.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
@@ -24,7 +25,6 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
-      // If token is invalid or expired, notify app to clear auth
       const token = localStorage.getItem("token");
       if (token) {
         localStorage.removeItem("token");
