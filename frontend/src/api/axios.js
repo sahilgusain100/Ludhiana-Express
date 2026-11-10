@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ludhiana-express.vercel.app/",
+  baseURL: "https://ludhiana-express.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
