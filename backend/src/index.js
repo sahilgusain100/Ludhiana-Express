@@ -17,7 +17,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin:["https://ludhiana-express-8qcj-qp5ot4q4s-practice-74ee.vercel.app",
+    "http://localhost:5173"
+  ]
+}));
 app.use(express.json());
 
 // MongoDB connection
