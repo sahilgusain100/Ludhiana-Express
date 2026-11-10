@@ -1,12 +1,13 @@
 
 import axios from "axios";
 
+
 const api = axios.create({
-  baseURL: "https://ludhiana-express.vercel.app/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://ludhiana-express.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials:true
+  withCredentials: true,
 });
 
 // Automatically attach JWT token to all requests
